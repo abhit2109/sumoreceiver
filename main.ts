@@ -38,10 +38,13 @@ basic.showString("R")
 basic.forever(function () {
     if (action == "A") {
         comment.comment("Insert A-Button Action Between These Comments")
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 90)
         comment.comment("Insert A-Button Action Between These Comments")
         action = "Z"
     } else if (action == "B") {
         comment.comment("Insert B-Button Action Between These Comments")
+        wuKong.setMotorSpeed(wuKong.MotorList.M1, 100)
+        wuKong.setMotorSpeed(wuKong.MotorList.M2, 100)
         comment.comment("Insert B-Button Action Between These Comments")
         action = "Z"
     } else if (action == "AB") {
@@ -50,6 +53,7 @@ basic.forever(function () {
         action = "Z"
     } else if (action == "C") {
         comment.comment("Insert C-Button Action Between These Comments")
+        wuKong.setAllMotor(100, -100)
         comment.comment("Insert C-Button Action Between These Comments")
         action = "Z"
     } else if (action == "D") {
@@ -64,6 +68,7 @@ basic.forever(function () {
         action = "Z"
     } else if (action == "F") {
         comment.comment("Insert F-Button Action Between These Comments")
+        wuKong.stopMotor(wuKong.MotorList.M1)
         comment.comment("Insert F-Button Action Between These Comments")
         action = "Z"
     } else {
